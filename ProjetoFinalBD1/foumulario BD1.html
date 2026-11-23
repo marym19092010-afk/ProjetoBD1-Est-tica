@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        /* Estilos  */
+        body {
+            background-color: #D89AA8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+       #caixamenu{
+            width: 580px;
+            height: 80px;
+            line-height: 80px; /* centraliza na vertical */
+            background-color: #aaa;
+            border: 1px dashed #851d3c98;
+            margin: 0 auto; 
+			border-radius: 10px;}
+			
+        ul.menu{
+            text-align: center; /* centraliza na horizontal */}
+        ul.menu li{
+            display: inline-block; /* horizontal */
+            margin: 0 5px; }
+        ul.menu li a{
+            background-color: #000000;
+            border-radius: 8px;
+            padding: 6px 10px;
+            color:rgb(255, 255, 255);
+        }
+        ul.menu li a:hover{
+            background-color: #fff;
+        }
+
+        h2 {
+            color: #80665A;
+            margin-bottom: 20px;
+        }
+
+        /* Container do formulário */
+        fieldset.main-box {
+            border: 2px solid #80665A;
+            border-radius: 8px;
+            padding: 25px;
+            width: 100%;
+            max-width: 550px;
+            background-color: #F5EDE5;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Organização dos blocos */
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label, .form-group span {
+            display: block;
+            color: #783F50;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        /* Estilização dos campos */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #F5EDE5;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        /* Botões de Enviar e Limpar */
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        input[type="submit"] {
+            background-color:#80665A;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #80665A;
+        }
+
+        input[type="reset"] {
+            background-color: #e0e0e0;
+            color: #333;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #d4d4d4;
+        }
+    </style>
+</head>
+<body>
+<div id="caixamenu">
+    <ul class="menu">
+        <li><a href="inedex.html">Home</a></li>
+        <li><a href="foumulario BD1.html">forms</a></li>
+        <li><a href="listar.html">listas</a></li>
+    </ul>
+</div>
+
+    <h2>Preencha o Formulário Abaixo</h2>
+
+    <form action="" method="get">
+        <fieldset class="main-box">
+
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+            </div>
+
+            <div class="form-group">
+                <label for="e-mail">E-mail:</label>
+                <input type="email" id="e-mail" name="e-mail" placeholder="Digite seu e-mail">
+            </div>
+
+            <div class="form-group">
+                <label for="servico">Serviço desejado:</label>
+                <select id="servico" name="servico">
+                    <option value="Limpeza de pele">Limpeza de pele</option>
+                    <option value="Manicure">Manicure</option>
+                    <option value="Sobrancelha">Sobrancelha</option>
+                    <option value="Depilação">Depilação</option>
+                    <option value="Massagem">Massagem</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar">
+            </div>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
